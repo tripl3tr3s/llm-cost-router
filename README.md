@@ -103,7 +103,7 @@ METER      usage { inputTokens, outputTokens, cacheReadTokens, cacheWriteTokens 
 - **Everything immutable.** `addRecord` returns a new tracker via spread; inputs are never
   mutated.
 - **Scoped on purpose.** Thinking/effort params and the agent loop live in a separate
-  package, [`agentic-tool-loop`](https://github.com/<github-user>/agentic-tool-loop).
+  package, [`agentic-tool-loop`](https://github.com/tripl3tr3s/agentic-tool-loop).
 
 ## API
 
@@ -152,11 +152,6 @@ pnpm run test
 pnpm run test:coverage  # 90% gate
 pnpm run lint
 ```
-
-## Read the write-up
-
-"Your LLM app's invoice is a bug you can't see: cache-accurate cost tracking + tiered
-model routing in ~200 lines." - **[LinkedIn article link TBD](#)**
 
 ## License
 
