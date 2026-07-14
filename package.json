@@ -1,0 +1,63 @@
+{
+  "name": "llm-cost-router",
+  "version": "0.1.0",
+  "description": "Tiered model routing + cache-accurate LLM cost tracking. Immutable, provider-agnostic, with an Anthropic pricing preset in the box.",
+  "keywords": [
+    "llm",
+    "ai",
+    "anthropic",
+    "openai",
+    "cost",
+    "pricing",
+    "token",
+    "model-routing",
+    "typescript"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "example": "tsx examples/route-and-track.ts",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/node": "^22.13.0",
+    "@vitest/coverage-v8": "^3.0.5",
+    "eslint": "^9.19.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.19.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.64.0",
+    "vitest": "^3.0.5"
+  },
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
